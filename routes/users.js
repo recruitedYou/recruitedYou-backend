@@ -8,6 +8,7 @@ const { check, validationResult } = require("express-validator");
 
 const User = require('../models/User');
 
+// router.get('')
 // @route    POST api/usersf
 // @desc     Register user
 // @access   Public
@@ -77,7 +78,7 @@ router.post(
       );
     } catch (err) {
       console.error(err.message);
-      res.status(500).send('Server error');
+      res.status(500).send('POST ERROR');
     }
   }
 );
