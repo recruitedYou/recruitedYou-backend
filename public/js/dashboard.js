@@ -1,4 +1,5 @@
 let jobs = []
+let verbose = true;
 
   const getAllJobs = () => {
     fetch('/jobs')

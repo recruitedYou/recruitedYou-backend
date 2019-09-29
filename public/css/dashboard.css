@@ -163,6 +163,9 @@ input {
 #profileImg {
   width: 200px;
 }
+.sectionTable {
+  width: 100%
+}
 
 @media (max-width: 1000px) {
   #profileImg {

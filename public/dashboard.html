@@ -52,7 +52,29 @@
             <hr>
             <section class="mainItem item1">
                 <!-- table. -->
-                <table class="table table-hover">
+
+            <div class="row">
+                <div class="main-sort-bar">
+                  <h5 id="listingType" class="main-sort-bar-item">Jobs</h5>
+                  <input type="text" id="search-listings" class="main-sort-bar-item" name="search-listings" size="40" placeholder="Search Listings">
+                  <span class="main-sort-bar-item">
+                    <h6>Sort By: </h6>
+                    <select name="" id="sorting-dropdown">
+                      <option value="district-asc">District: Ascending</option>
+                      <option value="district-dsc">District: Descending</option>
+                      <option value="school-asc">School: Ascending</option>
+                      <option value="school-dsc">School: Descending</option>
+                      <option value="grade-asc">Grade: Ascending</option>
+                      <option value="grade-dsc">Grade: Descending</option>
+                      <option value="subject-asc">Subject: Ascending</option>
+                      <option value="subject-dsc">Subject: Descending</option>
+                      <option value="date-asc">Date Posted: Ascending</option>
+                      <option value="date-dsc">Date Posted: Descending</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+                <table class="sectionTable table table-hover">
                     <thead>
                       <tr>
                         <th scope="col">Date</th>
