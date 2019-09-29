@@ -173,10 +173,7 @@ ul {
 #profileImg {
   width: 200px;
 }
-.sectionTable {
-  width: 10vw;
-}
-/* ////yael */
+
 .main-sort-bar {
   display: flex;
   flex-direction: row;
@@ -185,13 +182,4 @@ ul {
 }
 ​
 
-​
 
-​
-/* 
-@media (max-width: 1000px) {
-  #profileImg {
-    width: 100px;
-    height: 100px;
-  }
-} */
