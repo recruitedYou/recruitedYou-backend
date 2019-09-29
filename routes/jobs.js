@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
       grade: req.body.grade,
       subject: req.body.subject
     })
+    // const newJob = new Job(req.body)
     const save = await newJob.save()
     res.json(save)
   } catch (error) {

@@ -35,28 +35,32 @@
             </div>
         </div>
         <div class="main item">
-            <section class="mainItem item0">
+            <section class="mainItem item1">
                 <form action="/jobs" method="POST" id="sectionForm">
                     <h6>Post A New Job</h6>
-                <input type="text" name="district" id="district"
+                <input type="text" name="district" id="district" 
+                class="formInput"
                 placeholder="District">
                 <input type="text" name="school" id="school"
+                class="formInput"
                 placeholder="School">
-                <input type="text" name="grade" id="grade"
+                <input type="number" name="grade" id="grade"
+                class="formInput"
                 placeholder="Grade">
                 <input type="text" name="subject" id="subject"
+                class="formInput"
                 placeholder="Subject" >
-                <input type="submit">
+                <input type="submit"
+                class="formInput">
                 </form>
             </section>
             <hr>
-            <section class="mainItem item1">
                 <!-- table. -->
 
-            <div class="row">
+            <section class="row mainItem item2">
                 <div class="main-sort-bar">
                   <h5 id="listingType" class="main-sort-bar-item">Jobs</h5>
-                  <input type="text" id="search-listings" class="main-sort-bar-item" name="search-listings" size="40" placeholder="Search Listings">
+                  <input type="text" id="search-listings" class="main-sort-bar-item searchInput" name="search-listings" size="40" placeholder="Search Listings">
                   <span class="main-sort-bar-item">
                     <h6>Sort By: </h6>
                     <select name="" id="sorting-dropdown">
@@ -73,7 +77,8 @@
                     </select>
                   </span>
                 </div>
-              </div>
+              </section>
+              <section class="mainItem item3">
                 <table class="sectionTable table table-hover">
                     <thead>
                       <tr>
@@ -88,8 +93,9 @@
                     <tbody id="tbody">
                       <!-- dashboard.js populates data here on page load -->
                     </tbody>
-                  </table>
-            </section>
+                  </table> 
+                             </section>
+
         </div>
         <div class="sidebar item">
             <section class="sectionItem sectionItem1">
@@ -130,7 +136,7 @@
         <div class="footer1 item">Footer</div>
         <div class="footer2 item">
             Powered by
-            <a href="#">w3.css</a>
+            <a href="#">geekdom.com</a>
         </div>
     </div>
   <script src="./js/dashboard.js"></script>
