@@ -1,37 +1,57 @@
 let jobs = []
 let verbose = true;
 
-  const getAllJobs = () => {
-    fetch('/jobs')
+const getAllJobs = () => {
+  fetch('/jobs')
     .then(res => res.json())
     .then(data => jobs = [...data])
+}
+// getAllJobs()
+
+
+
+const addJob = async (district, school, grade, subject) => {
+  
+  let  data = {
+    district,
+    school,
+    grade,
+    subject
   }
-  // getAllJobs()
+  console.log(data);
+    try {
+       fetch('http://localhost:3001/jobs', {
+        method: `POST`,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      getAllJobs()
+      setTimeout(() => printToPage(jobs, "teacher"), 500);
+    } catch(error){
+      console.error(error.message)
+      console.log(`ADD JOB ERROR`);
+    }
 
-const postOptions = {
-  method: 'POST',
-  header: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify()
 }
 
-const addJob = (district = district.value, school = school.value, grade = grade.value, subject = subject.value ) => {
-  if(!district || !school || !grade || !subject) (
-    alert(`All fields must be complete`)
-  )
-  fetch('/jobs', postOptions)
-    .then(res => res.json)
-    .then(data => jobs = [...data])
-}
+let district = document.getElementById('district')
+let school = document.getElementById('school')
+let grade = document.getElementById('grade')
+let subject = document.getElementById('subject')
+document.getElementById('formSubmitting').addEventListener('click', (e) => {
+  e.preventDefault()
+  addJob(district.value, school.value, grade.value, subject.value)
+})
 
 const editJobOptions = {
-  
+
 }
 const editJob = () => {
 
 }
-  
+
 // Show that dashboard.js loaded
 console.log("Dashboard.js is loaded");
 
@@ -44,12 +64,12 @@ let tbody = document.getElementById("tbody");
 // Convert date
 const convertDate = (d) => {
   tempDate = new Date(d);
-  return output = tempDate.toString().substring(4,10);
+  return output = tempDate.toString().substring(4, 10);
 }
 
 // Print jobs to page
 const printToPage = (arr, pos) => {
-  (verbose) ? console.log("Running printtoPage") : "";
+  (verbose) ? console.log("Running printtoPage"): "";
 
   let html = "";
   tbody.innerHTML = html;
@@ -83,11 +103,11 @@ const search = document.getElementById("search-listings");
 
 // Search Jobs array for given value
 const searchJobsArr = (val) => {
-  (verbose) ? console.log(val) : "";
+  (verbose) ? console.log(val): "";
   let temp = [];
 
   jobs.forEach(e => {
-    if (e.district.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.school.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.subject.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.grade.value == val ) {
+    if (e.district.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.school.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.subject.toLowerCase().indexOf(val.toLowerCase()) >= 0 || e.grade.value == val) {
       temp.push(e);
     }
   })
@@ -110,67 +130,79 @@ const dropdown = document.getElementById("sorting-dropdown");
 
 // Eventlistener waiting for change of the dropdown menu
 dropdown.addEventListener("change", () => {
-  (verbose) ? console.log("dropdown changed to " + dropdown.value) : "";
+  (verbose) ? console.log("dropdown changed to " + dropdown.value): "";
 
   if (dropdown.value == "district-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.district > b.district) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "district-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.district > b.district) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "school-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.school > b.school) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "school-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.school > b.school) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "grade-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.grade > b.grade) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "grade-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.grade > b.grade) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "subject-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.subject > b.subject) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "subject-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.subject > b.subject) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "grade-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.grade > b.grade) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "grade-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.grade > b.grade) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "date-asc") {
     printToPage(jobs.sort((a, b) => {
       return (a.date > b.date) ? 1 : -1;
-    }), "teacher")};
+    }), "teacher")
+  };
 
   if (dropdown.value == "date-dsc") {
     printToPage(jobs.sort((a, b) => {
       return (a.date > b.date) ? -1 : 1;
-    }), "teacher")};
+    }), "teacher")
+  };
 });
 
 
