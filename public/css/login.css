@@ -1,0 +1,35 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9f9f9;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: relative
+}
+.loginWindow-items {
+  display: flex;
+  width: 386px;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 5px double #24272A; */
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background: #efefef;
+}
+.loginItem {
+  margin-top: 12px;
+  padding: 10px
+}
+#logo {
+  width: 60%;
+  margin: auto;
+}
+
+

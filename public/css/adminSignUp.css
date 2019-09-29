@@ -1,0 +1,53 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+#teacherBody {
+  background-image: url('../img/dot-grid.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#teacher-wrapper {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.teachHR {
+  width: 460px
+}
+.teachForm {
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+form {
+  width: 25vw;
+  background: #efefef;
+  -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+input {
+  width: 100%;
+  padding: 5px;
+}
+#password1 {
+  margin-bottom: 10px;
+  margin-top: 10px
+}
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+#logo {
+  width: 50%;
+  margin: auto;
+}

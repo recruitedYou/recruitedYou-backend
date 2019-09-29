@@ -1,0 +1,58 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  /* height: 10vh; */
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px rgba(0,0,0,0.24);
+}
+#logo {
+  margin-left: 20px;
+  height: 5vh
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+.headerItem {
+  flex:1;
+  background: #ede3e25e;
+}
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  /* background: yellow */
+}
+.leftItem {
+  padding: 10px
+}
+.right {
+  height: 100%;
+  background-image: url('../img/you-x-ventures-Oalh2MojUuk-unsplash@2x-1.svg');
+  background-size: cover;
+
+
+}
+#headerImg {
+  width: 100%;
+  height: 100%;
+  background: green
+}
+.headerButton {
+  width: 20vw;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px rgba(0,0,0,0.24);
+  background: #efefef
+}
+footer {
+  padding: 30px
+}
+

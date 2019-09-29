@@ -1,0 +1,13 @@
+                <form action="/jobs" method="POST" id="sectionForm">
+                    <h6>Post A New Job</h6>
+                <input type="text" name="district" id="district"
+                placeholder="District">
+                <input type="text" name="school" id="school"
+                placeholder="School">
+                <input type="text" name="grade" id="grade"
+                placeholder="Grade">
+                <input type="text" name="subject" id="subject"
+                placeholder="Subject" >
+                <input type="submit">
+                </form>
+                
