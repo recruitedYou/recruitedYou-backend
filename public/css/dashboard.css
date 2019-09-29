@@ -16,7 +16,6 @@ ul {
 }
 .nav {
   grid-area: 1 / 1 / span 1 / -1;
-  /* background: #444; */
   color: black;
   font-weight: 600;
   display: flex;
@@ -32,12 +31,12 @@ ul {
   background: lightgrey;
 }
 #asideBox {
-  width: 50%;
-  height: 30%;
-  padding: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
 }
 .asideBoxItem1 {
   flex: 1
@@ -49,8 +48,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: center;
-  /* width: 200px; */
+  align-items: center
 }
 .main {
   grid-area: 2 / 2 / span 1 / span 1;
@@ -60,16 +58,19 @@ ul {
   align-content: center;
   background: #efefef;
   overflow: scroll;
+  padding: 20px
 }
 .mainItem {
   margin: auto;
-  /* flex: 1; */
 }
 .item1 {
   flex:1
 }
 .item2 {
   flex:1;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly
 }
 .item3 {
   flex: 2
@@ -174,12 +175,7 @@ ul {
   width: 200px;
 }
 
-.main-sort-bar {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: space-between;
-}
+@media
 ​
 
 
